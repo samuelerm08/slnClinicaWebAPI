@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WSClinica.Models
 {
-    [Table("Especialidad")]
+    [Table("Habitacion")]
     public class Habitacion
     {
-        public int ID { get; set; }
-        [Range(1,100, ErrorMessage = "Solo se permiten numeros entre 1 y 100")]
+        public int ID { get; set; }        
+        [RegularExpression(@"^[A]{3}\s+[1-100]{3}$", ErrorMessage = "Solo se permiten numeros entre 1 y 100")]
         public int Numero { get; set; }
         [Column(TypeName = "varchar(50)")]
         [Required]
