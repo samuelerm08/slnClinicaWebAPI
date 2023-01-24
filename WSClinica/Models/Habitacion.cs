@@ -6,9 +6,10 @@ namespace WSClinica.Models
     [Table("Habitacion")]
     public class Habitacion
     {
-        public int ID { get; set; }        
-        [RegularExpression(@"^[A]{3}\s+[1-100]{3}$", ErrorMessage = "Solo se permiten numeros entre 1 y 100")]
-        public int Numero { get; set; }
+        public int ID { get; set; }
+        
+        [RegularExpression(@"^[A]{3}(0[0-9][1-9]|1[0]{2})$", ErrorMessage = "Solo se permiten numeros entre 1 y 100")]
+        public string Numero { get; set; }
         [Column(TypeName = "varchar(50)")]
         [Required]
         public string Estado { get; set; }
