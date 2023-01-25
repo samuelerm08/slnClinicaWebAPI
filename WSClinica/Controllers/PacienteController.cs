@@ -47,8 +47,6 @@ namespace WSClinica.Controllers
             return paciente;
         }
 
-
-
         //INSERT
         [HttpPost]
         public ActionResult Post(Paciente p)

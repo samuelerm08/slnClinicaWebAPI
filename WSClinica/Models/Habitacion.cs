@@ -8,7 +8,7 @@ namespace WSClinica.Models
     {
         public int ID { get; set; }
         
-        [RegularExpression(@"^[A]{3}(0[0-9][1-9]|1[0]{2})$", ErrorMessage = "Solo se permiten numeros entre 1 y 100")]
+        [RegularExpression(@"^[A]{3}(0[0-9][1-9]|1[0]{2})$", ErrorMessage = "El numero de habitación debe contener tres letras A al inicio y numeros entre 1 y 100\nEJ: AAA000")]
         public string Numero { get; set; }
         [Column(TypeName = "varchar(50)")]
         [Required]

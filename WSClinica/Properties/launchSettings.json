@@ -11,7 +11,7 @@
     "WSClinica": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/clinica",
+      "launchUrl": "api/paciente",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
